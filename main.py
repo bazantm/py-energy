@@ -3,12 +3,12 @@ from typing import Dict
 START_LINE = 6
 
 # Constants for important column indices (0-based)
-NODE_INDEX = 0
-NODE_KEY = 1
-PARENT_INDEX = 2
-CODE_INDEX = 6
+NODE_INDEX = 1
+NODE_KEY = 2
+PARENT_INDEX = 3
+CODE_INDEX = 7
 
-class Parent:
+class Node:
     """
     Represents a Parent object identified by an integer index.
     """
@@ -17,7 +17,7 @@ class Parent:
         # Additional initialization can be added here
 
     def __repr__(self):
-        return f"Parent(index={self.index})"
+        return f"Node(index={self.index})"
 
 
 class PlantDiagram:
@@ -33,7 +33,7 @@ class PlantDiagram:
 
     ARROW = ' -> '
 
-    diag_objects: Dict[int, Parent] = {}
+    diag_objects: Dict[int, Node] = {}
 
     diag_text = DIAGRAM_HEADER + LINE_SEPARATOR
 
@@ -92,7 +92,7 @@ class LineData:
             return
 
         if node_key not in PlantDiagram.diag_objects:
-            PlantDiagram.diag_objects[node_key] = Parent(node_key)
+            PlantDiagram.diag_objects[node_key] = Node(node_key)
 
             if node_key != 1:
                 LineData.diagram.add_to_diag({'node_key': node_key, 'parent': self.parent, 'code': self.code})
