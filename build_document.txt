@@ -1,0 +1,11 @@
+------------------------------------------
+Properties: Hashed [135407x11(652)]
+------------------------------------------
+|   INDEX|NODE_KEY     |PARENT      |CHILD     |NEXT      |PREV       |NODE_TEXT                  |
+---------------------------------------------------------------------------------------------------------------------------
+|      1 |&VIRTUALROOT |            |          |          |           |                          |
+|      2 |           1 |&VIRTUALROOT|         2|          |           | FORM BUILD_DOCUMENTS     |
+|      3 |           2 |          1 |         3|          |           | FORM READ_DATA           |
+|      4 |           3 |          2 |         4|          |           | FORM READ_DOC_HEADER     |
+|      5 |           4 |          3 |         4|          |           | FUNC ISU_IMPORT_PRINTDOC |
+|      6 |           5 |          3 |         6|          |           | FUNC ISU_DB_BUF_PRINT_DOC|
